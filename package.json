@@ -4,6 +4,8 @@
   "main": "index.js",
   "scripts": {
     "build": "ncc build index.js --license licenses.txt",
+    "check-format": "prettier --check .",
+    "format": "prettier --write .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Wissididom",
@@ -14,6 +16,7 @@
     "@actions/github": "^6.0.0"
   },
   "devDependencies": {
-    "@vercel/ncc": "^0.38.1"
+    "@vercel/ncc": "^0.38.1",
+    "prettier": "^3.2.5"
   }
 }
