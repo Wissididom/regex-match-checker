@@ -28,10 +28,14 @@ try {
   if (match) {
     if (failOnMatch) {
       core.setFailed("Regex matched!");
+    } else {
+      console.log("Regex matched!");
     }
   } else {
     if (failOnNoMatch) {
       core.setFailed("Regex did not match!");
+    } else {
+      console.log("Regex did not match!");
     }
   }
   core.setOutput("match", match);
