@@ -18,6 +18,9 @@ try {
 			core.setFailed('Regex did not match!');
 		}
 	}
+	console.log(failOnMatch);
+	console.log(failOnNoMatch);
+	console.log(match);
 	core.setOutput('match', match);
 } catch (error) {
 	core.setFailed(error.message);
