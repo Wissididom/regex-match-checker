@@ -1,23 +1,43 @@
-# Hello world javascript action
+# regex match checker
 
-This action prints "Hello World" or "Hello" + the name of a person to greet to the log.
+This action checks if a regex matches and if it does you can configure if you want the action to fail or succeed
 
 ## Inputs
 
-### `who-to-greet`
+### `text`
 
-**Required** The name of the person to greet. Default `"World"`.
+**Required** The text you want to check
+
+### `regex`
+
+**Required** The regex you want to use for checking
+
+### `flags`
+
+The regex flags you want to use for checking
+
+### `fail-on-match`
+
+Whether to fail on successful match
+
+### `fail-on-match`
+
+Whether to fail on no match
 
 ## Outputs
 
-### `time`
+### `match`
 
-The time we greeted you.
+Whether the regex matched or not
 
 ## Example usage
 
 ```yaml
-uses: actions/hello-world-javascript-action@e76147da8e5c81eaf017dede5645551d4b94427b
+uses: Wissididom/regex-match-checker@main
 with:
-  who-to-greet: "Mona the Octocat"
+  text: "Hello World"
+  regex: (Hello|Bye) World
+  flags: "g"
+  fail-on-match: false
+  fail-on-no-match: true
 ```

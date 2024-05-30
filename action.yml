@@ -5,18 +5,18 @@ inputs:
     description: "The text you want to check"
     required: true
   regex:
-    description: "The text you want to check"
+    description: "The regex you want to use for checking"
     required: true
   flags:
-    description: "The text you want to check"
+    description: "The regex flags you want to use for checking"
     required: false
     default: "g"
   fail-on-match:
-    description: "The text you want to check"
+    description: "Whether to fail on successful match"
     required: false
     default: false
   fail-on-no-match:
-    description: "The text you want to check"
+    description: "Whether to fail on no match"
     required: false
     default: true
 outputs:
