@@ -1,0 +1,27 @@
+name: 'Regex Match Checker'
+description: 'Checks if a regex matches and if it does you can configure if you want the action to fail or succeed'
+inputs:
+  text:
+    description: 'The text you want to check'
+    required: true
+  regex:
+    description: 'The text you want to check'
+    required: true
+  flags:
+    description: 'The text you want to check'
+    required: false
+    default: 'g'
+  fail-on-match:
+    description: 'The text you want to check'
+    required: false
+    default: false
+  fail-on-no-match:
+    description: 'The text you want to check'
+    required: false
+    default: true
+outputs:
+  match:
+    description: 'Whether the regex matched or not'
+runs:
+  using: 'node20'
+  main: 'index.js'
