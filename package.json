@@ -2,6 +2,7 @@
   "name": "regex-match-checker",
   "version": "1.0.0",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "build": "ncc build index.js --license licenses.txt",
     "check-format": "prettier --check .",
